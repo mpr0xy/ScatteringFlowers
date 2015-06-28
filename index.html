@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ScatteringFlowers Demo</title>
+  <style>
+    .main {
+      width: 300px;
+      margin: 0 auto;
+    }
+    .demo-item {
+      width: 300px;
+      height: 450px;
+    }
+  </style>
+  <script src="scatteringFlowers.js"></script>
+</head>
+<body>
+
+  <div class="main">
+    <div id="down" class="demo-item">
+
+    </div>
+    <div id="spread" class="demo-item">
+
+    </div>
+  </div>
+
+  <script>
+    var down = new ScatteringFlowers({
+      id: 'down',
+      image: 'http://img2.ph.126.net/mt4do4OhEyb_ges2t3ADVQ==/664280945055167963.jpg',
+      line: 5,
+      column: 7
+    })
+    down.config({
+      useTime: 5,
+      opacity: 0.95,
+      rotateXStart: -30,
+      rotateYStart: -30,
+      rotateXEnd: 30,
+      rotateYEnd: 30
+    })
+    down.run({
+      effect: 'down'
+    });
+
+    var spread = new ScatteringFlowers({
+      id: 'spread',
+      image: 'http://img0.ph.126.net/nmfnuRfxu__hwyvHcws86Q==/6630868754095604964.jpg',
+      line: 6,
+      column: 7
+    });
+    spread.run({
+      effect: 'spread'
+    });
+
+
+  </script>
+</body>
+</html>
